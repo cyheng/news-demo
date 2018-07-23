@@ -1,0 +1,155 @@
+ 
+.navbar-wrapper{
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #349fe1;
+  padding: 20rpx;
+}
+.navbar-icon-bg{
+  background-color: #fff;
+  border-radius:50%;
+  position: relative;
+  top:25rpx;
+  left:15rpx;
+}
+.navbar-icon{
+  height: 64rpx;
+  width: 64rpx;
+  padding: 5rpx;
+}
+
+.navbar-text{
+  color:#fff;
+  font-size: 35rpx;
+  font-weight:bold;
+  line-height: 49rpx;
+  position: relative;
+  top:25rpx;
+  left:45rpx;
+  
+}
+
+.navbar-items{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #349fe1;
+  padding: 40rpx 20rpx 20rpx;
+}
+
+.navbar-item{
+  color: #fff;
+  font-weight:bold;
+  font-size: 35rpx;
+  line-height: 49rpx;
+  opacity: 0.8;
+  box-sizing: content-box ;
+}
+
+.active-item{
+  opacity: 1;
+}
+
+.active-item-border{
+  border-bottom: 1px solid #fff;
+  width: 50%;
+  margin: 15rpx auto 0;
+}
+.inactive-item-border,.active-item-border{
+  margin-top: 15rpx;
+}
+.news-wrapper{
+  margin: 20rpx;
+}
+.news-item{
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid rgba(0, 0,0 , 0.2);
+  padding: 30rpx;
+  position: relative;
+   
+}
+.news-item:last-child,.news-item:first-child{
+  border-bottom: none;
+}
+.news-item:first-child{
+  display: block;
+  border-radius: 5rpx;
+  padding: 40rpx;
+  height: 360rpx;
+}
+.news-item:first-child>.title-wrapper{
+  background: rgba(0, 0,0 , 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:0;
+  padding: 20rpx;
+  z-index: 1000;
+}
+.news-item:first-child>.title-wrapper>.title{
+  color: #fff;
+  font-weight:bold;
+  opacity: 0.9;
+}
+.news-item:first-child .source-wrapper{
+  opacity: 0.6;
+}
+.news-item:first-child .source,.news-item:first-child .date{
+  margin-bottom: 20rpx;
+  color: rgba(255, 255,255 , 0.8);
+  font-weight:bold;
+}
+.news-item:first-child >.img-wrapper{
+  position: absolute;
+  top:0;
+  left:0;
+   
+  height: 100%;
+  width: 100%;
+  border-radius: 15rpx;
+}
+.news-item:first-child  .item-img{
+  
+  position: absolute;
+  top:0;
+  left:0;
+  
+  height: 100%;
+  width: 100%;
+  border-radius: 15rpx;
+}
+.title-wrapper{
+  padding-right: 20rpx;
+ 
+}
+.title{
+  opacity: 0.7;
+  font-weight:bold;
+  font-size: 35rpx;
+  line-height: 49rpx;
+}
+ .img-wrapper{
+	height: 256rpx;
+  width: 256rpx;
+ 
+}
+
+.item-img{
+	max-width: 100%;
+	max-height: 100%;	
+   
+}
+
+.source-wrapper{
+  margin-top: 20rpx;
+  display: flex;
+  opacity: 0.5;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+.date{
+  margin-left: 30rpx;
+}
+ 

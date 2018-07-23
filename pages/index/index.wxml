@@ -1,0 +1,32 @@
+<!--index.wxml-->
+ <view class='navbar-wrapper'>
+ <view class='navbar-icon-bg'>
+  <image class='navbar-icon' src='/images/book.png'></image>
+   </view>
+  <view class='navbar-text'>快读·资讯</view>
+ </view>
+  <view class='navbar-items'>
+    <view   class='navbar-item {{activeItemIndex == index ?"active-item":""}}'
+    bindtap='changeNews' wx:for="{{navItems}}" wx:key="{{index}}" id="{{index}}">
+    {{item}}
+    <view class='{{activeItemIndex == index ?"active-item-border":"inactive-item-border"}}'>
+    </view>
+    </view>
+  </view>
+  <view class="news-wrapper">
+  <view class='news-item' wx:for="{{news}}" wx:key="{{item.id}}" 
+  bindtap='viewDetail'>
+  <view class='title-wrapper'>
+    <view class='title'  data-id="{{item.id}}">{{item.title}}</view>
+    <view class='source-wrapper'>
+    <view class='source'>{{item.source}}</view>
+     <view class='date'>{{item.date}}</view>
+     </view>
+  </view>
+    <view class='img-wrapper'  >
+        <image class='item-img' mode='aspectFill'  data-id="{{item.id}}"
+          src='{{item.firstImage}}'></image>
+    </view>
+  </view>
+  </view>
+

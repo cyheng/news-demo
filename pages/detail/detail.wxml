@@ -1,0 +1,26 @@
+<!--pages/detail/detail.wxml-->
+ 
+ <view class='nav-wrapper'>
+  <navigator open-type="navigateBack" >
+    <image src='/images/arrow.png' class='nav-arrow'></image>
+  </navigator>
+  <view class='navbar-text'>快读·资讯</view>
+</view>
+
+<view class='main'>
+  <view class='header-wrapper'>
+    <view class='header'>{{newsDetail.title}}</view>
+    <view class='info-wrapper'>
+      <view class='info-source'>{{newsDetail.source}}</view>
+      <view class='info-date'>{{newsDetail.date}}</view>
+      <view class='info-readCount'>阅读 {{newsDetail.readCount}}</view>
+    </view>
+  </view>
+  <view class='content-wrapper'>
+    <view wx:key="{{item.id}}" wx:for="{{newsDetail.content}}">
+      <view wx:if='{{item.type === "strong"}}' class='strong'>{{item.text}}</view>
+      <view wx:if='{{item.type === "p"}}' class='p'>{{item.text}}</view>
+      <image mode='aspectFill' wx:if='{{item.type === "image"}}' class='img' src='{{item.src}}'></image>
+    </view>
+  </view>
+</view>
